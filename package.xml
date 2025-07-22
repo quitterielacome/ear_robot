@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>trajectory_planner</name>
+  <version>0.0.1</version>
+  <description>Trajectory planner + executor for XArm 7</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>opencv-python</exec_depend>
+  <exec_depend>xarm_msgs</exec_depend>
+</package>

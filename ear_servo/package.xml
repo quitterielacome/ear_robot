@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ear_servo</name>
+  <version>0.1.0</version>
+  <description>KLT+RANSAC tracking and pose servo</description>
+  <maintainer email="quitterie@estalenx.com">Quitterie</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+    <exec_depend>rclpy</exec_depend>
+    <exec_depend>sensor_msgs</exec_depend>
+    <exec_depend>geometry_msgs</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+    <exec_depend>std_srvs</exec_depend>
+    <exec_depend>cv_bridge</exec_depend>
+    <exec_depend>ament_index_python</exec_depend>
+
+  <!-- OpenCV & numpy come via pip; okay for Python packages -->
+</package>

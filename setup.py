@@ -1,21 +1,29 @@
 from setuptools import setup
 
-package_name = 'trajectory_planner'
+package_name = 'ear_servo'
 
 setup(
     name=package_name,
-    version='0.0.1',
+    version='0.1.0',
     packages=[package_name],
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+         ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml', 'README.md']),
+        ('share/' + package_name + '/config', ['config/default.yaml']),
+        ('share/' + package_name + '/launch', ['launch/bringup.launch.py']),
+    ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='your_name',
-    description='Trajectory planner and executor for XArm 7',
+    maintainer='Quitterie',
+    maintainer_email='quitterie@estalenx.com',
+    description='KLT+RANSAC tracking and image-based pose servo for xArm',
     license='MIT',
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'tracking_node = trajectory_planner.tracking_node:main',
-            'trajectory_server = trajectory_planner.trajectory_server:main',
+            'ear_servo_pose_node = ear_servo.ear_servo_pose_node:main',
+            'ear_servo_twist_node = ear_servo.ear_servo_twist_node:main',
+            'metrics_logger = ear_servo.metrics_logger:main',
         ],
     },
 )
